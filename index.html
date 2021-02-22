@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Fast Updates for Least-Squares Rotational Alignment</title>
+	<meta name="author" content="Jiayi Eris Zhang, Alec Jacobson, Marc Alexa"/>
+<meta property="og:image" content="http://www.dgp.toronto.edu/projects/neuralSubdivision/neuralSubdivision_teaser.jpg" /> <meta property="og:description" content="We present a novel approach to enrich arbitrary rig animations with elastodynamic secondary effects. Unlike previous methods which pit rig displacements and physical forces as adversaries against each other, we advocate that physics should complement artists’ intentions. We propose optimizing for elastodynamic displacements in the subspace orthogonal to displacements that can be created by the rig. This ensures that the additional dynamic motions do not undo the rig animation. The complementary space is highdimensional, algebraically constructed without manual oversight, and capable of rich high-frequency dynamics. Unlike prior tracking methods, we do not require extra painted weights, segmentation into fixed and free regions or tracking clusters. Our method is agnostic to the physical model and plugs into non-linear FEM simulations, geometric as-rigid-as-possible energies, or mass-spring models. Our method does not require a particular type of rig and adds secondary effects to skeletal animations, cage-based deformations, wire deformers, motion capture data, and rigid-body simulations." /> <meta name="twitter:card" content="summary"></meta> <meta name="og:title" content="Complementary Dynamics"></meta>
+	<link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<h1 id="fastupdates_eurographis2021_">Fast Updates for Least-Squares Rotational Alignment <em>Eurographics 2021</em></h1>
+
+<div class=authors>
+Jiayi Eris Zhang<sup>1</sup>, Alec Jacobson<sup>1</sup>, Marc Alexa<sup>2</sup> <br><br>
+<sup>1</sup>University of Toronto, <sup>2</sup>TU Berlin
+</div>
+
+<figure>
+<img src="teaser.jpg"/>
+Least-squares rotation fitting is a core low-level subroutine in a number of important high-level tasks in computer graphics, geometry processing, robotics and computer vision.
+</figure>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Across computer graphics, vision, robotics and simulation, many applications rely on determining the 3D rotation that alignstwo objects or sets of points. The standard solution is to use singular value decomposition (SVD), where the optimal rotation isrecovered as the product of the singular vectors. Faster computation of only the rotation is possible using suitable parameteriza-tions of the rotations and iterative optimization. We propose such a method based on the Cayley transformations. The resultingoptimization problem allows better local quadratic approximation compared to the Taylor approximation of the exponentialmap. This results in both faster convergence as well as more stable approximation compared to other iterative approaches. Italso maps well to AVX vectorization. We compare our implementation with a wide range of alternatives on real and syntheticdata. The results demonstrate up to two orders of magnitude of speedup compared to a straightforward SVD implementationand a 1.5-6 times speedup over popular optimized code.</p>
+
+<h2 id="downloads">Downloads</h2>
+
+<ul>
+<li> <a href="nosvd.pdf">Paper (9.3M)</a></li>
+<li> <a href="https://github.com/ErisZhang/fast-rotation-fitting">Code (C++)</a></li>
+</ul>
+
+<h2 id="talk">Technical Paper Talk</h2>
+Coming Soon
+
+<h2 id="bibtex">BibTeX</h2>
+
+<pre><code>@article{Zhang:Fast:2021,
+  title = {Fast Updates for Least-Squares Rotational Alignment},
+  author = {Jiayi Eris Zhang and Alec Jacobson and Marc Alexa},
+  year = {2021},
+  journal = {Computer Graphics Forum},
+}
+</code></pre>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>
+  This work is funded in part by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy – The Berlin Mathematics Research Center MATH+ EXC-2046/1, NSERC Discovery(RGPIN2017–05235, RGPAS–2017–507938), New Frontiers of Research Fund (NFRFE–201), the Ontario Early Research Award program, the Canada Research Chairs Program, and gifts by Adobe Systems. We thank Silvia Sellán for proofreading and all the anonymous reviewers for their helpful comments and suggestions.
+</p>
+
+</body>
+</html>
+
