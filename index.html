@@ -23,7 +23,7 @@ Least-squares rotation fitting is a core low-level subroutine in a number of imp
 
 <h2 id="abstract">Abstract</h2>
 
-<p>Across computer graphics, vision, robotics and simulation, many applications rely on determining the 3D rotation that alignstwo objects or sets of points. The standard solution is to use singular value decomposition (SVD), where the optimal rotation isrecovered as the product of the singular vectors. Faster computation of only the rotation is possible using suitable parameteriza-tions of the rotations and iterative optimization. We propose such a method based on the Cayley transformations. The resultingoptimization problem allows better local quadratic approximation compared to the Taylor approximation of the exponentialmap. This results in both faster convergence as well as more stable approximation compared to other iterative approaches. Italso maps well to AVX vectorization. We compare our implementation with a wide range of alternatives on real and syntheticdata. The results demonstrate up to two orders of magnitude of speedup compared to a straightforward SVD implementationand a 1.5-6 times speedup over popular optimized code.</p>
+<p>Across computer graphics, vision, robotics and simulation, many applications rely on determining the 3D rotation that aligns two objects or sets of points. The standard solution is to use singular value decomposition (SVD), where the optimal rotation is recovered as the product of the singular vectors. Faster computation of only the rotation is possible using suitable parameterizations of the rotations and iterative optimization. We propose such a method based on the Cayley transformations. The resulting optimization problem allows better local quadratic approximation compared to the Taylor approximation of the exponential map. This results in both faster convergence as well as more stable approximation compared to other iterative approaches. It also maps well to AVX vectorization. We compare our implementation with a wide range of alternatives on real and synthetic data. The results demonstrate up to two orders of magnitude of speedup compared to a straightforward SVD implementation and a 1.5-6 times speedup over popular optimized code.</p>
 
 <h2 id="downloads">Downloads</h2>
 
@@ -48,7 +48,7 @@ Coming Soon
 <h2 id="acknowledgements">Acknowledgements</h2>
 
 <p>
-  This work is funded in part by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy – The Berlin Mathematics Research Center MATH+ EXC-2046/1, NSERC Discovery(RGPIN2017–05235, RGPAS–2017–507938), New Frontiers of Research Fund (NFRFE–201), the Ontario Early Research Award program, the Canada Research Chairs Program, and gifts by Adobe Systems. We thank Silvia Sellán for proofreading and all the anonymous reviewers for their helpful comments and suggestions.
+  This work is funded in part by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy – The Berlin Mathematics Research Center MATH+ EXC-2046/1, NSERC Discovery (RGPIN2017–05235, RGPAS–2017–507938), New Frontiers of Research Fund (NFRFE–201), the Ontario Early Research Award program, the Canada Research Chairs Program, and gifts by Adobe Systems. We thank Silvia Sellán for proofreading and all the anonymous reviewers for their helpful comments and suggestions.
 </p>
 
 </body>
